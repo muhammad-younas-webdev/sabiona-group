@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--primary-font);
+}
+
+/* 
+Josefin Sans Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.container {
+    max-width: 1380px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --gray: #B2B2BF;
+    --white: #FFFFFF;
+    --primary-font: "Josefin Sans", sans-serif;
+    --transition-default: all 0.3s ease;
+}

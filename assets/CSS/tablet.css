@@ -1,0 +1,19 @@
+@media (max-width:768px) {
+    .sabiona-header-section {
+        .container {
+            .sobiona-header-container {
+                .header-logo-image {
+                    width: 120px;
+                }
+
+                .header-navbar-container {
+                    top: 76px;
+
+                    &.active {}
+
+                    .header-nav-list {}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.sabiona-header-section {
+    padding: 5px 0;
+    background-color: black;
+
+    .container {
+        .sobiona-header-container {
+            display: flex;
+            justify-content: space-between;
+
+            .header-logo-image {
+                width: 160px;
+            }
+
+            .header-navbar-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 12%;
+
+                .header-nav-list {
+                    display: flex;
+                    max-width: 597px;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .header-nav-item {
+                        .header-nav-link {
+                            color: var(--gray);
+                            transition: all .3s ease;
+                            font-family: var(--primary-font);
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 100%;
+
+                            &:hover {
+                                color: var(--white);
+                            }
+                        }
+
+                        .nav-active-color {
+                            color: var(--white);
+                        }
+                    }
+                }
+
+                .header-navbar-language-wrapper {
+                    display: flex;
+                    max-width: 82px;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .language-link {
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 100%;
+                        color: var(--gray);
+                        transition: var(--transition-default);
+
+                        &:hover {
+                            color: var(--white);
+                        }
+                    }
+
+                    .nav-active-color {
+                        color: var(--white);
+                    }
+
+                    span {
+                        color: #FFFFFF1A;
+                    }
+                }
+            }
+
+            /* Hamburger Button */
+            .hamburger-btn {
+                display: none;
+            }
+        }
+    }
+}
