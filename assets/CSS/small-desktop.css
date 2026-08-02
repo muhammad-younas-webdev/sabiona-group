@@ -15,7 +15,7 @@
                     padding-top: 6%;
                     position: fixed;
                     z-index: 1;
-                    right: -80%;
+                    right: -100%;
                     top: 100px;
                     flex-direction: column;
                     height: calc(100vh - 110px);

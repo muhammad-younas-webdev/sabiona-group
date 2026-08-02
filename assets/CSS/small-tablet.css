@@ -18,7 +18,7 @@
 
                     &.active {
                         .hamburger-line:nth-child(1) {
-                            transform: translateY(6.5px) rotate(45deg);
+                            transform: translateY(7px) rotate(45deg);
                         }
 
                         .hamburger-line:nth-child(2) {
@@ -26,7 +26,7 @@
                         }
 
                         .hamburger-line:nth-child(3) {
-                            transform: translateY(-6.5px) rotate(-45deg);
+                            transform: translateY(-7px) rotate(-45deg);
                         }
                     }
                 }

@@ -16,50 +16,49 @@
             }
         }
     }
-}
 
-/* ##########################  */
-/* END :: Header container     */
-/* ##########################  */
-/* #####################  */
-/* #####################  */
-/* #####################  */
-/* #####################  */
-/* #####################  */
-/* ##########################  */
-/* START :: Hero container     */
-/* ##########################  */
-.sabiona-hero-section {
-    .gradient-top {}
+    /* ##########################  */
+    /* END :: Header container     */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##########################  */
+    /* START :: Hero container     */
+    /* ##########################  */
+    .sabiona-hero-section {
+        .gradient-top {}
 
-    .gradient-left {}
+        .gradient-left {}
 
-    .container {
-        .sabiona-hero-container {
-            .hero-content-main-wrapper {
-                .hero-content-wrapper {
-                    .hero-title {}
+        .container {
+            .sabiona-hero-container {
+                .hero-content-main-wrapper {
+                    .hero-content-wrapper {
+                        .hero-title {}
 
-                    .title-outline {}
+                        .title-outline {}
 
-                    .hero-head {
-                        font-size: 68px;
-                        line-height: 75px;
-                        width: 385px;
+                        .hero-head {
+                            font-size: 68px;
+                            line-height: 75px;
+                            width: 385px;
+                        }
+
+                        .hero-desc {}
+
+                        .primary-btn {}
                     }
 
-                    .hero-desc {}
-
-                    .primary-btn {}
+                    .hero-isolation-image {
+                        display: none;
+                    }
                 }
 
-                .hero-isolation-image {
-                    max-width: 370PX;
-                    width: 100%;
-                }
+                .featured-cards {}
             }
-
-            .featured-cards {}
         }
     }
 }
