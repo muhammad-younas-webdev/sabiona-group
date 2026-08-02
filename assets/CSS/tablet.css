@@ -36,20 +36,27 @@
 
     .container {
         .sabiona-hero-container {
-            .hero-content-wrapper {
-                .hero-title {}
+            .hero-content-main-wrapper {
+                .hero-content-wrapper {
+                    .hero-title {}
 
-                .title-outline {}
+                    .title-outline {}
 
-                .hero-head {
-                    font-size: 68px;
-                    line-height: 75px;
-                    width: 385px;
+                    .hero-head {
+                        font-size: 68px;
+                        line-height: 75px;
+                        width: 385px;
+                    }
+
+                    .hero-desc {}
+
+                    .primary-btn {}
                 }
 
-                .hero-desc {}
-
-                .primary-btn {}
+                .hero-isolation-image {
+                    max-width: 370PX;
+                    width: 100%;
+                }
             }
 
             .featured-cards {}

@@ -92,16 +92,11 @@
 
         .container {
             .sabiona-hero-container {
-                .hero-content-wrapper {
-                    .hero-title {}
-
-                    .title-outline {}
-
-                    .hero-head {}
-
-                    .hero-desc {}
-
-                    .primary-btn {}
+                .hero-content-main-wrapper {
+                    .hero-isolation-image {
+                        max-width: 370PX;
+                        width: 100%;
+                    }
                 }
 
                 .featured-cards {

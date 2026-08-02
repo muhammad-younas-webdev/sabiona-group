@@ -128,44 +128,61 @@ Josefin Sans Font Link */
 
     .container {
         .sabiona-hero-container {
-            .hero-content-wrapper {
-                position: relative;
+            .hero-content-main-wrapper {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                width: 90%;
 
-                .hero-title {
-                    font-size: 11px;
-                    line-height: 100%;
-                    letter-spacing: 3px;
-                    text-transform: uppercase;
-                    color: var(--soft-light-blue);
+                .hero-content-wrapper {
+                    position: relative;
+
+                    .hero-title {
+                        font-size: 11px;
+                        line-height: 100%;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        color: var(--soft-light-blue);
+                    }
+
+                    .title-outline {
+                        width: 50px;
+                        height: 1.5px;
+                        border-radius: 50%;
+                        background-color: #8FA9C4;
+                        margin-top: 10px;
+                    }
+
+                    .hero-head {
+                        font-size: 76px;
+                        line-height: 84px;
+                        font-weight: 700;
+                        max-width: 600px;
+                        color: var(--white);
+                        padding-block: 24px;
+                    }
+
+                    .hero-desc {
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-weight: 400;
+                        color: #94A3B8;
+                        max-width: 380px;
+                    }
+
+                    .primary-btn {
+                        margin: 24px 0 70px;
+                    }
                 }
 
-                .title-outline {
-                    width: 50px;
-                    height: 1.5px;
-                    border-radius: 50%;
-                    background-color: #8FA9C4;
-                    margin-top: 10px;
-                }
+                .hero-isolation-image {
+                    max-width: 370PX;
+                    width: 100%;
+                    position: relative;
 
-                .hero-head {
-                    font-size: 76px;
-                    line-height: 84px;
-                    font-weight: 700;
-                    max-width: 600px;
-                    color: var(--white);
-                    padding-block: 24px;
-                }
-
-                .hero-desc {
-                    font-size: 18px;
-                    line-height: 30px;
-                    font-weight: 400;
-                    color: #94A3B8;
-                    max-width: 380px;
-                }
-
-                .primary-btn {
-                    margin: 24px 0 70px;
+                    img {
+                        height: auto;
+                    }
                 }
             }
 

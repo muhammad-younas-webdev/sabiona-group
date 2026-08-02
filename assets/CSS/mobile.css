@@ -20,26 +20,33 @@
 
         .container {
             .sabiona-hero-container {
-                .hero-content-wrapper {
-                    .hero-title {}
+                .hero-content-main-wrapper {
+                    .hero-content-wrapper {
+                        .hero-title {}
 
-                    .title-outline {}
+                        .title-outline {}
 
-                    .hero-head {
-                        font-size: 42px;
-                        line-height: 50px;
-                        padding-block: 18px;
-                        max-width: 200px;
+                        .hero-head {
+                            font-size: 42px;
+                            line-height: 50px;
+                            padding-block: 18px;
+                            max-width: 200px;
+                        }
+
+                        .hero-desc {
+                            font-size: 14px;
+                            line-height: 22px;
+                            max-width: 300px;
+                        }
+
+                        .primary-btn {
+                            margin: 16px 0 40px;
+                        }
                     }
 
-                    .hero-desc {
-                        font-size: 14px;
-                        line-height: 22px;
-                        max-width: 300px;
-                    }
-
-                    .primary-btn {
-                        margin: 16px 0 40px;
+                    .hero-isolation-image {
+                        max-width: 370PX;
+                        width: 100%;
                     }
                 }
 
