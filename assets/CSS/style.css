@@ -241,3 +241,82 @@ Josefin Sans Font Link */
 /* ##########################  */
 /* END :: Hero container       */
 /* ##########################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #######################################  */
+/* START :: Home Page AboutUs container     */
+/* #######################################  */
+.home-about-us-section {
+    .container {
+        .home-about-us-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .home-about-us-content-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 28px;
+
+                .home-about-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    >span {
+                        font-size: 11px;
+                        font-weight: 700;
+                        color: #64748B;
+                        letter-spacing: 2.5px;
+                        line-height: 100%;
+                    }
+
+                    .home-about-title-line {
+                        width: 48px;
+                        background-color: #64748B;
+                        height: 1px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .home-about-head {
+                    color: #0C0F14;
+                    font-size: 34px;
+                    line-height: 44px;
+                    font-weight: 700;
+                }
+
+                .home-about-desc {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #475569;
+                    line-height: 26px;
+                }
+            }
+
+            .home-about-map-image {
+                max-width: 420px;
+                width: 100%;
+            }
+
+            .home-about-location-card {
+                .location-number {}
+
+                .location-label {}
+
+                .location-card-item {
+                    .location-title {}
+
+                    .location-desc {}
+                }
+            }
+        }
+    }
+}
+
+/* #####################################  */
+/* END :: Home Page AboutUs container     */
+/* #####################################  */

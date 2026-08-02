@@ -30,6 +30,7 @@ img {
     --primary-font: "Josefin Sans", sans-serif;
     --transition-default: all 0.3s ease;
     --soft-light-blue: #8FA9C4;
+    --black: #000000;
 }
 
 .overlay {
@@ -75,12 +76,28 @@ img {
         }
     }
 
-    span {}
+    &.white-btn {
+        border: 1px solid var(--black);
+        border-radius: 4px;
+        padding: 12px 24px;
 
-    i {}
+        span {
+            color: var(--black);
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: 1.5px;
+            transition: var(--transition-default);
+        }
 
-    &:hover {
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        i {
+            color: var(--black);
+            transition: var(--transition-default);
+            margin-left: 8px;
+        }
+    }
+
+    &.black-btn:hover {
         background-color: white;
 
         span {
@@ -89,6 +106,18 @@ img {
 
         i {
             color: black;
+        }
+    }
+
+    &.white-btn:hover {
+        background-color: black;
+
+        span {
+            color: white;
+        }
+
+        i {
+            color: white;
         }
     }
 }
