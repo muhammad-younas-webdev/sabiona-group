@@ -1,0 +1,77 @@
+@media (max-width:576px) {
+    .sabiona-header-section {
+        .container {
+            .sobiona-header-container {
+                .header-logo-image {
+                    width: 80px;
+                }
+
+                .header-navbar-container {
+                    &.active {}
+
+                    .header-nav-list {}
+                }
+
+                .hamburger-btn {
+                    width: 18px;
+                    height: 15px;
+
+                    &.active {
+                        .hamburger-line:nth-child(1) {
+                            transform: translateY(6.5px) rotate(45deg);
+                        }
+
+                        .hamburger-line:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        .hamburger-line:nth-child(3) {
+                            transform: translateY(-6.5px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ##########################  */
+    /* END :: Header container     */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##########################  */
+    /* START :: Hero container     */
+    /* ##########################  */
+    .sabiona-hero-section {
+        .gradient-top {}
+
+        .gradient-left {}
+
+        .container {
+            .sabiona-hero-container {
+                .hero-content-wrapper {
+                    .hero-title {}
+
+                    .title-outline {}
+
+                    .hero-head {
+                        font-size: 55px;
+                        line-height: 67px;
+                        width: 385px;
+                    }
+
+                    .hero-desc {}
+
+                    .primary-btn {}
+                }
+
+                .featured-cards {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+}

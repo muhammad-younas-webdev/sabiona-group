@@ -7,10 +7,6 @@
     font-family: var(--primary-font);
 }
 
-/* 
-Josefin Sans Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 .container {
     max-width: 1380px;
     width: 96%;
@@ -27,6 +23,7 @@ img {
     --white: #FFFFFF;
     --primary-font: "Josefin Sans", sans-serif;
     --transition-default: all 0.3s ease;
+    --soft-light-blue: #8FA9C4;
 }
 
 .overlay {
@@ -37,10 +34,45 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-    z-index: -2;
+    z-index: 1;
 }
 
 .overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+.primary-btn {
+    background-color: transparent;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &.black-btn {
+        border: 1px solid var(--white);
+        border-radius: 4px;
+        padding: 12px 24px;
+
+        span {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: 1.5px;
+        }
+
+        i {
+            color: var(--white);
+        }
+    }
+
+    span {}
+
+    i {}
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
 }

@@ -1,6 +1,12 @@
+/* 
+Josefin Sans Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 .sabiona-header-section {
     padding: 5px 0;
     background-color: black;
+    position: relative;
+    z-index: 1;
 
     .container {
         .sobiona-header-container {
@@ -80,3 +86,134 @@
         }
     }
 }
+
+/* ##########################  */
+/* END :: Header container     */
+/* ##########################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* ##########################  */
+/* START :: Hero container     */
+/* ##########################  */
+.sabiona-hero-section {
+    background-image: url(../images/sabiona-hero-bg-image.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 75px 0 92px;
+    height: 100%;
+    position: relative;
+
+    .gradient-top {
+        background: linear-gradient(180deg, rgba(12, 15, 20, 0.6) 0%, rgba(12, 15, 20, 0) 100%);
+        position: absolute;
+        top: 0;
+        height: 180px;
+        width: 100%;
+    }
+
+    .gradient-left {
+        background: linear-gradient(90deg, #0C0F14 0%, rgba(12, 15, 20, 0.98) 20%, rgba(12, 15, 20, 0.85) 35%, rgba(12, 15, 20, 0.5) 55%, rgba(12, 15, 20, 0.15) 75%, rgba(12, 15, 20, 0) 100%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 70%;
+        z-index: 0;
+        height: 100%;
+    }
+
+    .container {
+        .sabiona-hero-container {
+            .hero-content-wrapper {
+                position: relative;
+
+                .hero-title {
+                    font-size: 11px;
+                    line-height: 100%;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: var(--soft-light-blue);
+                }
+
+                .title-outline {
+                    width: 50px;
+                    height: 1.5px;
+                    border-radius: 50%;
+                    background-color: #8FA9C4;
+                    margin-top: 10px;
+                }
+
+                .hero-head {
+                    font-size: 76px;
+                    line-height: 84px;
+                    font-weight: 700;
+                    max-width: 600px;
+                    color: var(--white);
+                    padding-block: 24px;
+                }
+
+                .hero-desc {
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    color: #94A3B8;
+                    max-width: 380px;
+                }
+
+                .primary-btn {
+                    margin: 24px 0 70px;
+                }
+            }
+
+            .featured-cards {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                justify-content: space-between;
+                gap: 16px;
+
+                .featured-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 35px 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    border: 1px solid #FFFFFF1F;
+                    border-radius: 12px;
+                    backdrop-filter: blur(8px);
+                    gap: 12px;
+
+                    svg {
+                        path {}
+                    }
+
+                    .featured-card-title {
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        font-weight: 700;
+                        color: var(--white);
+                        text-align: center;
+                        line-height: 21px;
+                    }
+
+                    .featured-card-desc {
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #E5EBF2B3;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ##########################  */
+/* END :: Hero container       */
+/* ##########################  */

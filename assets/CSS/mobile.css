@@ -1,34 +1,49 @@
-@media (max-width:576px) {
-    .sabiona-header-section {
+@media (max-width:420px) {
+
+    /* ##########################  */
+    /* END :: Header container     */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##########################  */
+    /* START :: Hero container     */
+    /* ##########################  */
+    .sabiona-hero-section {
+        padding: 46px 0 62px;
+
+        .gradient-top {}
+
+        .gradient-left {}
+
         .container {
-            .sobiona-header-container {
-                .header-logo-image {
-                    width: 80px;
-                }
+            .sabiona-hero-container {
+                .hero-content-wrapper {
+                    .hero-title {}
 
-                .header-navbar-container {
-                    &.active {}
+                    .title-outline {}
 
-                    .header-nav-list {}
-                }
-
-                .hamburger-btn {
-                    width: 18px;
-                    height: 15px;
-
-                    &.active {
-                        .hamburger-line:nth-child(1) {
-                            transform: translateY(6.5px) rotate(45deg);
-                        }
-
-                        .hamburger-line:nth-child(2) {
-                            opacity: 0;
-                        }
-
-                        .hamburger-line:nth-child(3) {
-                            transform: translateY(-6.5px) rotate(-45deg);
-                        }
+                    .hero-head {
+                        font-size: 46px;
+                        line-height: 57px;
+                        padding-block: 18px;
                     }
+
+                    .hero-desc {
+                        font-size: 14px;
+                        line-height: 22px;
+                        max-width: 300px;
+                    }
+
+                    .primary-btn {
+                        margin: 16px 0 40px;
+                    }
+                }
+
+                .featured-cards {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }

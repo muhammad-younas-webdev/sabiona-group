@@ -17,3 +17,42 @@
         }
     }
 }
+
+/* ##########################  */
+/* END :: Header container     */
+/* ##########################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* ##########################  */
+/* START :: Hero container     */
+/* ##########################  */
+.sabiona-hero-section {
+    .gradient-top {}
+
+    .gradient-left {}
+
+    .container {
+        .sabiona-hero-container {
+            .hero-content-wrapper {
+                .hero-title {}
+
+                .title-outline {}
+
+                .hero-head {
+                    font-size: 68px;
+                    line-height: 75px;
+                    width: 385px;
+                }
+
+                .hero-desc {}
+
+                .primary-btn {}
+            }
+
+            .featured-cards {}
+        }
+    }
+}

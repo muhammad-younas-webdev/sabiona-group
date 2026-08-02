@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
+    <title>Modern Hero Section</title>
 
     <style>
+      /* ===========================
+   RESET
+=========================== */
       * {
         margin: 0;
         padding: 0;
@@ -13,216 +16,236 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      .header {
-        background: #222;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #000;
         color: #fff;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
       }
 
+      /* ===========================
+   CONTAINER
+=========================== */
       .container {
-        width: min(1200px, 90%);
+        width: 100%;
+        max-width: 1320px;
         margin: auto;
+        padding: 0 20px;
+      }
+
+      /* ===========================
+   HEADER
+=========================== */
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .header-container {
+        height: 90px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        height: 70px;
+        justify-content: space-between;
       }
 
       .logo {
-        font-size: 24px;
+        font-size: 30px;
         font-weight: bold;
+        color: #fff;
+        letter-spacing: 2px;
       }
 
-      .nav-list {
+      .nav {
         display: flex;
         gap: 40px;
       }
 
-      .nav-list a {
+      .nav a {
+        text-decoration: none;
+        color: #d3d3d3;
+        transition: 0.3s;
+      }
+
+      .nav a:hover {
+        color: #fff;
+      }
+
+      /* ===========================
+   HERO SECTION
+=========================== */
+
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+          url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80");
+
+        background-size: cover;
+        background-position: center;
+
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+      }
+
+      /* ===========================
+   TOP GRADIENT
+=========================== */
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 180px;
+
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.95),
+          rgba(35, 35, 35, 0.75),
+          transparent
+        );
+
+        z-index: 1;
+      }
+
+      /* ===========================
+   LEFT TO RIGHT GRADIENT
+=========================== */
+
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.95),
+          rgba(30, 30, 30, 0.75),
+          rgba(70, 70, 70, 0.3),
+          transparent
+        );
+
+        z-index: 1;
+      }
+
+      /* ===========================
+   HERO CONTAINER
+=========================== */
+
+      .hero-container {
+        position: relative;
+        z-index: 5;
+
+        max-width: 650px;
+        padding-top: 90px;
+      }
+
+      .hero-subtitle {
+        color: #bfbfbf;
+        font-size: 18px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .hero-title {
+        font-size: 68px;
+        line-height: 1.05;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .hero-text {
+        color: #cfcfcf;
+        line-height: 1.8;
+        font-size: 18px;
+        margin-bottom: 35px;
+      }
+
+      .hero-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        border: 1px solid #777;
+        text-decoration: none;
         color: #fff;
         transition: 0.3s;
       }
 
-      .nav-list a:hover {
-        color: #00bfff;
-      }
-
-      /* Hamburger */
-
-      .hamburger {
-        display: none;
-        width: 32px;
-        height: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 1002;
-      }
-
-      .hamburger span {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 3px;
+      .hero-btn:hover {
         background: #fff;
-        border-radius: 50px;
-        transition: 0.3s ease;
+        color: #000;
       }
 
-      .hamburger span:nth-child(1) {
-        top: 0;
-      }
-
-      .hamburger span:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .hamburger span:nth-child(3) {
-        bottom: 0;
-      }
-
-      /* Cross */
-
-      .hamburger.active span:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-      }
-
-      .hamburger.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .hamburger.active span:nth-child(3) {
-        top: 50%;
-        bottom: auto;
-        transform: translateY(-50%) rotate(-45deg);
-      }
-
-      /* Overlay */
-
-      .overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.3s;
-        z-index: 998;
-      }
-
-      .overlay.active {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      /* Mobile */
+      /* ===========================
+   RESPONSIVE
+=========================== */
 
       @media (max-width: 768px) {
-        .hamburger {
-          display: block;
+        .hero-title {
+          font-size: 46px;
         }
 
-        .navbar {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 280px;
-          height: 100vh;
-          background: #333;
-          padding-top: 90px;
-          transition: 0.35s;
-          z-index: 999;
+        .hero-text {
+          font-size: 16px;
         }
 
-        .navbar.active {
-          right: 0;
+        .nav {
+          display: none;
         }
-
-        .nav-list {
-          flex-direction: column;
-          gap: 30px;
-          padding-left: 30px;
-        }
-      }
-
-      /* Demo Content */
-
-      .hero {
-        height: 150vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 40px;
       }
     </style>
   </head>
   <body>
-    <div class="overlay"></div>
+    <!-- =========================
+     HEADER
+========================== -->
 
     <header class="header">
       <div class="container">
-        <div class="logo">LOGO</div>
+        <div class="header-container">
+          <div class="logo">SABIONA</div>
 
-        <nav class="navbar">
-          <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-
-        <button class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <section class="hero"> Responsive Navbar Demo </section>
+    <!-- =========================
+     HERO SECTION
+========================== -->
 
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navbar = document.querySelector(".navbar");
-      const overlay = document.querySelector(".overlay");
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-container">
+          <p class="hero-subtitle"> BRIDGING MARKETS. </p>
 
-      function closeMenu() {
-        hamburger.classList.remove("active");
-        navbar.classList.remove("active");
-        overlay.classList.remove("active");
-      }
+          <h1 class="hero-title">
+            BUILDING <br />
+            VALUE.
+          </h1>
 
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navbar.classList.toggle("active");
-        overlay.classList.toggle("active");
-      });
+          <p class="hero-text">
+            We connect businesses with opportunities through innovative
+            solutions, strategic partnerships and long-term sustainable growth.
+          </p>
 
-      overlay.addEventListener("click", closeMenu);
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-          closeMenu();
-        }
-      });
-    </script>
+          <a href="#" class="hero-btn"> Learn More </a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
