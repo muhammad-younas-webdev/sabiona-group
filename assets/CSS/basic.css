@@ -7,6 +7,12 @@
     font-family: var(--primary-font);
 }
 
+a,
+button {
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
 .container {
     max-width: 1380px;
     width: 96%;
@@ -44,9 +50,9 @@ img {
 
 .primary-btn {
     background-color: transparent;
-    display: flex;
-    gap: 8px;
-    align-items: center;
+    display: inline;
+    transition: var(--transition-default);
+    position: relative;
 
     &.black-btn {
         border: 1px solid var(--white);
@@ -59,16 +65,32 @@ img {
             font-weight: 600;
             line-height: 100%;
             letter-spacing: 1.5px;
+            transition: var(--transition-default);
         }
 
         i {
             color: var(--white);
+            transition: var(--transition-default);
+            margin-left: 8px;
         }
     }
 
     span {}
 
     i {}
+
+    &:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        background-color: white;
+
+        span {
+            color: black;
+        }
+
+        i {
+            color: black;
+        }
+    }
 }
 
 @media (max-width: 768px) {

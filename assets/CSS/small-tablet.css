@@ -14,7 +14,7 @@
 
                 .hamburger-btn {
                     width: 18px;
-                    height: 15px;
+                    height: 16px;
 
                     &.active {
                         .hamburger-line:nth-child(1) {
@@ -60,7 +60,7 @@
                     .hero-head {
                         font-size: 55px;
                         line-height: 67px;
-                        width: 385px;
+                        max-width: 385px;
                     }
 
                     .hero-desc {}

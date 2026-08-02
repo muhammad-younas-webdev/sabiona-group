@@ -9,6 +9,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" />
 
+    <!-- LINK :: AOS Animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
     <!-- Title  -->
     <title>Sabiona Group</title>
 
@@ -128,7 +131,7 @@
       <div class="container">
         <div class="sabiona-hero-container">
           <!-- Sabiona Hero Container  -->
-          <div class="hero-content-wrapper">
+          <div class="hero-content-wrapper" data-aos="fade-right">
             <p class="hero-title">BRIDGING MARKETS.</p>
             <div class="title-outline"></div>
             <h1 class="hero-head">BUILDING VALUE.</h1>
@@ -267,5 +270,15 @@
 
     <!-- Link JS File  -->
     <script src="assets/JS/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        easing: "ease-out-cubic",
+      });
+    </script>
   </body>
 </html>

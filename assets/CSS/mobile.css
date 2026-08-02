@@ -26,9 +26,10 @@
                     .title-outline {}
 
                     .hero-head {
-                        font-size: 46px;
-                        line-height: 57px;
+                        font-size: 42px;
+                        line-height: 50px;
                         padding-block: 18px;
+                        max-width: 200px;
                     }
 
                     .hero-desc {
