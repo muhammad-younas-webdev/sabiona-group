@@ -365,9 +365,18 @@ Josefin Sans Font Link */
 /* ######################################  */
 .portfolio-section {
     padding: 120px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .container {
         .portfolio-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            justify-self: center;
+
             .portfolio-content-container {
                 display: flex;
                 flex-direction: column;
@@ -408,13 +417,85 @@ Josefin Sans Font Link */
                     color: #111827;
                     line-height: 26px;
                 }
+            }
 
-                .primary-btn {
-                    &.white-btn {
-                        span {}
+            /* Swiper Card Wrapper  */
+            .cards-swiper-wrapper {
+                width: 100%;
+                position: relative;
 
-                        i {}
+                .swiper {
+                    width: 100%;
+
+                    .swiper-wrapper {
+                        display: flex;
+                        gap: 24px;
+
+                        .swiper-slide {
+                            position: relative;
+
+                            .portfolio-card {
+                                position: relative;
+                                height: 340px;
+                                /* ************* */
+                                max-width: 244px;
+
+                                /* ************* */
+                                .swiper-card-image {
+                                    width: 100%;
+                                    height: 100%;
+                                    filter: grayscale(100%) brightness(0.9) contrast(0.95);
+
+                                    img {
+                                        border-radius: 8px;
+                                    }
+                                }
+
+                                .card-content-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    height: 100%;
+                                    position: absolute;
+                                    inset: 0;
+                                    padding: 24px;
+
+                                    .swiper-card-icon {
+                                        max-width: max-content;
+                                        border: 1px solid #FFFFFF4D;
+                                        background-color: #FFFFFF26;
+                                        border-radius: 24px;
+                                        width: 48px;
+                                        height: 48px;
+                                        aspect-ratio: 1;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+
+                                    .card-content {
+                                        .swiper-card-title {
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            line-height: 100%;
+                                            text-transform: uppercase;
+                                            color: var(--white);
+                                        }
+
+                                        .swiper-card-desc {
+                                            margin-top: 8px;
+                                            font-size: 12px;
+                                            line-height: 18px;
+                                            font-weight: 400;
+                                            color: var(--white);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
+
+                    .swiper-pagination {}
                 }
             }
         }
