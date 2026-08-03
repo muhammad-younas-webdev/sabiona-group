@@ -86,10 +86,6 @@
     /* START :: Hero container     */
     /* ##########################  */
     .sabiona-hero-section {
-        .gradient-top {}
-
-        .gradient-left {}
-
         .container {
             .sabiona-hero-container {
                 .hero-content-main-wrapper {
@@ -105,4 +101,56 @@
             }
         }
     }
+
+    /* ##########################  */
+    /* END :: Hero container       */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##################################  */
+    /* START :: Home Page About container  */
+    /* ##################################  */
+    .home-about-us-section {
+        .container {
+            .home-about-us-container {
+                flex-direction: column;
+                gap: 10vw;
+
+                .home-about-us-content-wrapper {
+                    .home-about-title {
+                        >span {}
+
+                        .home-about-title-line {}
+                    }
+
+                    .home-about-head {}
+
+                    .home-about-desc {}
+                }
+
+                .home-about-map-image {}
+
+                .home-about-location-card {
+                    max-width: 80%;
+
+                    .location-number {}
+
+                    .location-label {}
+
+                    .location-card-item {
+                        .location-title {}
+
+                        .location-desc {}
+                    }
+                }
+            }
+        }
+    }
+
+    /* ################################  */
+    /* END :: Home Page About container  */
+    /* ################################  */
 }

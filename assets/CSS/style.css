@@ -250,16 +250,20 @@ Josefin Sans Font Link */
 /* START :: Home Page AboutUs container     */
 /* #######################################  */
 .home-about-us-section {
+    padding: 100px 0;
+
     .container {
         .home-about-us-container {
             display: flex;
             width: 100%;
             justify-content: space-between;
+            align-items: center;
 
             .home-about-us-content-wrapper {
                 display: flex;
                 flex-direction: column;
                 gap: 28px;
+                max-width: 480px;
 
                 .home-about-title {
                     display: flex;
@@ -303,14 +307,44 @@ Josefin Sans Font Link */
             }
 
             .home-about-location-card {
-                .location-number {}
+                width: 100%;
+                max-width: 260px;
 
-                .location-label {}
+                .location-number {
+                    font-size: 52px;
+                    font-weight: 700;
+                    line-height: 56px;
+                    color: #0C0F14;
+                }
+
+                .location-label {
+                    font-size: 11px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    padding: 6px 0 24px;
+                    color: #64748B;
+                }
 
                 .location-card-item {
-                    .location-title {}
+                    padding-block: 24px;
+                    border-top: 1px solid #CBD5E1;
 
-                    .location-desc {}
+                    .location-title {
+                        color: #0C0F14;
+                        font-family: Josefin Sans;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 100%;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .location-desc {
+                        color: #64748B;
+                        font-family: Josefin Sans;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
                 }
             }
         }

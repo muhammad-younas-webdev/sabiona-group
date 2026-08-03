@@ -74,4 +74,60 @@
             }
         }
     }
+
+    /* ##########################  */
+    /* END :: Hero container       */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##################################  */
+    /* START :: Home Page About container  */
+    /* ##################################  */
+    .home-about-us-section {
+        padding: 65px 0;
+
+        .container {
+            .home-about-us-container {
+                .home-about-us-content-wrapper {
+                    gap: 18px;
+
+                    .home-about-title {
+                        >span {}
+
+                        .home-about-title-line {}
+                    }
+
+                    .home-about-head {
+                        font-size: 26px;
+                        line-height: 38px;
+                    }
+
+                    .home-about-desc {
+                        line-height: 23px;
+                    }
+                }
+
+                .home-about-map-image {}
+
+                .home-about-location-card {
+                    .location-number {}
+
+                    .location-label {}
+
+                    .location-card-item {
+                        .location-title {}
+
+                        .location-desc {}
+                    }
+                }
+            }
+        }
+    }
+
+    /* ################################  */
+    /* END :: Home Page About container  */
+    /* ################################  */
 }

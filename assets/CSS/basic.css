@@ -54,6 +54,7 @@ img {
     display: inline;
     transition: var(--transition-default);
     position: relative;
+    max-width: max-content;
 
     &.black-btn {
         border: 1px solid var(--white);
