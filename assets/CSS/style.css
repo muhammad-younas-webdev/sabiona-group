@@ -425,77 +425,112 @@ Josefin Sans Font Link */
                 position: relative;
 
                 .swiper {
-                    width: 100%;
+                    overflow: hidden;
 
                     .swiper-wrapper {
-                        display: flex;
-                        gap: 24px;
-
                         .swiper-slide {
                             position: relative;
+                            height: auto;
+                            height: 340px;
 
-                            .portfolio-card {
-                                position: relative;
-                                height: 340px;
-                                /* ************* */
-                                max-width: 244px;
+                            .swiper-slide {
+                                width: 100%;
 
-                                /* ************* */
-                                .swiper-card-image {
-                                    width: 100%;
-                                    height: 100%;
-                                    filter: grayscale(100%) brightness(0.9) contrast(0.95);
+                                .portfolio-card {
+                                    position: relative;
+                                    /* ************* */
+                                    /* ************* */
+                                    overflow: hidden;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+                                    transition: all .4s ease;
 
-                                    img {
-                                        border-radius: 8px;
+                                    .swiper-card-image {
+                                        width: 100%;
+                                        height: 100%;
+                                        filter: grayscale(100%) brightness(0.9) contrast(0.95);
+
+                                        img {
+                                            border-radius: 8px;
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            display: block;
+                                            transition: transform .5s ease;
+                                        }
                                     }
-                                }
 
-                                .card-content-wrapper {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-between;
-                                    height: 100%;
-                                    position: absolute;
-                                    inset: 0;
-                                    padding: 24px;
-
-                                    .swiper-card-icon {
-                                        max-width: max-content;
-                                        border: 1px solid #FFFFFF4D;
-                                        background-color: #FFFFFF26;
-                                        border-radius: 24px;
-                                        width: 48px;
-                                        height: 48px;
-                                        aspect-ratio: 1;
+                                    .card-content-wrapper {
                                         display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                    }
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        height: 100%;
+                                        position: absolute;
+                                        inset: 0;
+                                        padding: 24px;
 
-                                    .card-content {
-                                        .swiper-card-title {
-                                            font-size: 16px;
-                                            font-weight: 700;
-                                            line-height: 100%;
-                                            text-transform: uppercase;
-                                            color: var(--white);
+                                        .swiper-card-icon {
+                                            max-width: max-content;
+                                            border: 1px solid #FFFFFF4D;
+                                            background-color: #FFFFFF26;
+                                            border-radius: 24px;
+                                            width: 48px;
+                                            height: 48px;
+                                            aspect-ratio: 1;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
                                         }
 
-                                        .swiper-card-desc {
-                                            margin-top: 8px;
-                                            font-size: 12px;
-                                            line-height: 18px;
-                                            font-weight: 400;
-                                            color: var(--white);
+                                        .card-content {
+                                            .swiper-card-title {
+                                                font-size: 16px;
+                                                font-weight: 700;
+                                                line-height: 100%;
+                                                text-transform: uppercase;
+                                                color: var(--white);
+                                            }
+
+                                            .swiper-card-desc {
+                                                margin-top: 8px;
+                                                font-size: 12px;
+                                                line-height: 18px;
+                                                font-weight: 400;
+                                                color: var(--white);
+                                            }
                                         }
                                     }
                                 }
                             }
+
+                            .portfolio-card:hover .swiper-card-image img {
+                                transform: scale(1.08);
+                            }
+
+                            .portfolio-card:hover .swiper-card-image {
+                                filter: grayscale(0%);
+                            }
                         }
                     }
 
-                    .swiper-pagination {}
+                    .swiper-pagination {
+                        position: relative;
+                        margin-top: 40px;
+                    }
+
+                    .swiper-pagination-bullet {
+                        width: 12px;
+                        height: 12px;
+                        background: #8A8A8A;
+                        opacity: 1;
+                        transition: .3s;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        background: #fff;
+                        width: 30px;
+                        border-radius: 30px;
+                    }
                 }
             }
         }
