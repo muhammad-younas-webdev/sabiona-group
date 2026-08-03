@@ -206,6 +206,7 @@ Josefin Sans Font Link */
                     border-radius: 12px;
                     backdrop-filter: blur(8px);
                     gap: 12px;
+                    opacity: 0;
                     transition: var(--transition-default);
 
                     svg {

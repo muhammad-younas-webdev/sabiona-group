@@ -3,249 +3,197 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Hero Section</title>
+    <title>Document</title>
 
     <style>
-      /* ===========================
-   RESET
-=========================== */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #000;
-        color: #fff;
-      }
-
-      /* ===========================
-   CONTAINER
-=========================== */
-      .container {
         width: 100%;
-        max-width: 1320px;
-        margin: auto;
-        padding: 0 20px;
-      }
-
-      /* ===========================
-   HEADER
-=========================== */
-      .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100;
-      }
-
-      .header-container {
-        height: 90px;
+        background-color: black;
+        height: 400px;
         display: flex;
         align-items: center;
+        justify-content: center;
+      }
+
+      .featured-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
         justify-content: space-between;
-      }
+        gap: 16px;
 
-      .logo {
-        font-size: 30px;
-        font-weight: bold;
-        color: #fff;
-        letter-spacing: 2px;
-      }
+        .featured-card {
+          will-change: transform;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 35px 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          border: 1px solid #ffffff1f;
+          border-radius: 12px;
+          backdrop-filter: blur(8px);
+          gap: 12px;
+          transition: var(--transition-default);
 
-      .nav {
-        display: flex;
-        gap: 40px;
-      }
+          svg {
+            path {
+            }
+          }
 
-      .nav a {
-        text-decoration: none;
-        color: #d3d3d3;
-        transition: 0.3s;
-      }
+          .featured-card-title {
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--white);
+            color: white;
+            text-align: center;
+            line-height: 21px;
+          }
 
-      .nav a:hover {
-        color: #fff;
-      }
+          .featured-card-desc {
+            font-size: 12px;
+            line-height: 20px;
+            color: #e5ebf2b3;
+            font-weight: 400;
+            text-align: center;
+          }
 
-      /* ===========================
-   HERO SECTION
-=========================== */
-
-      .hero-section {
-        position: relative;
-        overflow: hidden;
-
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-          url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80");
-
-        background-size: cover;
-        background-position: center;
-
-        min-height: 100vh;
-
-        display: flex;
-        align-items: center;
-      }
-
-      /* ===========================
-   TOP GRADIENT
-=========================== */
-
-      .hero-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 180px;
-
-        background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.95),
-          rgba(35, 35, 35, 0.75),
-          transparent
-        );
-
-        z-index: 1;
-      }
-
-      /* ===========================
-   LEFT TO RIGHT GRADIENT
-=========================== */
-
-      .hero-section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-
-        background: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.95),
-          rgba(30, 30, 30, 0.75),
-          rgba(70, 70, 70, 0.3),
-          transparent
-        );
-
-        z-index: 1;
-      }
-
-      /* ===========================
-   HERO CONTAINER
-=========================== */
-
-      .hero-container {
-        position: relative;
-        z-index: 5;
-
-        max-width: 650px;
-        padding-top: 90px;
-      }
-
-      .hero-subtitle {
-        color: #bfbfbf;
-        font-size: 18px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-      }
-
-      .hero-title {
-        font-size: 68px;
-        line-height: 1.05;
-        font-weight: 700;
-        margin-bottom: 25px;
-      }
-
-      .hero-text {
-        color: #cfcfcf;
-        line-height: 1.8;
-        font-size: 18px;
-        margin-bottom: 35px;
-      }
-
-      .hero-btn {
-        display: inline-block;
-        padding: 16px 40px;
-        border: 1px solid #777;
-        text-decoration: none;
-        color: #fff;
-        transition: 0.3s;
-      }
-
-      .hero-btn:hover {
-        background: #fff;
-        color: #000;
-      }
-
-      /* ===========================
-   RESPONSIVE
-=========================== */
-
-      @media (max-width: 768px) {
-        .hero-title {
-          font-size: 46px;
-        }
-
-        .hero-text {
-          font-size: 16px;
-        }
-
-        .nav {
-          display: none;
+          &:hover {
+            transform: scale(1.025);
+          }
         }
       }
     </style>
   </head>
   <body>
-    <!-- =========================
-     HEADER
-========================== -->
+    <!-- Featured container  -->
+    <div class="featured-cards">
+      <!-- Featured Card No. 1  -->
+      <div class="featured-card">
+        <!-- Featured Card SVG icon   -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="28"
+          viewBox="0 0 24 28"
+          fill="none">
+          <path
+            d="M16 0H8V2.66667H16V0V0ZM10.6667 17.3333H13.3333V9.33333H10.6667V17.3333ZM21.3733 8.50667L23.2667 6.61333C22.6933 5.93333 22.0667 5.29333 21.3867 4.73333L19.4933 6.62667C17.4267 4.97333 14.8267 3.98667 12 3.98667C5.37333 3.98667 0 9.36 0 15.9867C0 22.6133 5.36 27.9867 12 27.9867C18.64 27.9867 24 22.6133 24 15.9867C24 13.1733 23.0133 10.5733 21.3733 8.50667ZM12 25.3333C6.84 25.3333 2.66667 21.16 2.66667 16C2.66667 10.84 6.84 6.66667 12 6.66667C17.16 6.66667 21.3333 10.84 21.3333 16C21.3333 21.16 17.16 25.3333 12 25.3333Z"
+            fill="white" />
+        </svg>
 
-    <header class="header">
-      <div class="container">
-        <div class="header-container">
-          <div class="logo">SABIONA</div>
-
-          <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-          </nav>
-        </div>
+        <!-- Featured Card Title  -->
+        <p class="featured-card-title">LONG-TERM PERSPECTIVE</p>
+        <p class="featured-card-desc"
+          >We build partnerships with a long-term horizon and entrepreneurial
+          mindset.</p
+        >
       </div>
-    </header>
+      <!-- Featured Card No. 2  -->
+      <div class="featured-card">
+        <!-- Featured Card SVG icon   -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27"
+          height="27"
+          viewBox="0 0 27 27"
+          fill="none">
+          <path
+            d="M13.32 0C5.96 0 0 5.97333 0 13.3333C0 20.6933 5.96 26.6667 13.32 26.6667C20.6933 26.6667 26.6667 20.6933 26.6667 13.3333C26.6667 5.97333 20.6933 0 13.32 0ZM23.2933 9.54667L16.6133 8.97333L13.9467 2.69333C18.2267 2.94667 21.8267 5.72 23.2933 9.54667ZM16.5333 17.8933L13.3333 15.9733L10.1467 17.8933L10.9867 14.2667L8.17333 11.8267L11.88 11.5067L13.3333 8.08L14.7867 11.4933L18.4933 11.8133L15.68 14.2533L16.5333 17.8933V17.8933ZM12.72 2.69333L10.0533 8.98667L3.36 9.56C4.82667 5.72 8.42667 2.93333 12.72 2.69333V2.69333ZM2.66667 13.3333C2.66667 12.48 2.77333 11.6533 2.97333 10.8533L8.02667 15.2267L6.54667 21.56C4.17333 19.6 2.66667 16.64 2.66667 13.3333ZM7.78667 22.4267L13.3333 19.08L18.88 22.4133C17.2533 23.4133 15.36 24 13.32 24C11.2933 24 9.4 23.4133 7.78667 22.4267ZM20.12 21.56L18.64 15.2267L23.6933 10.8533C23.88 11.64 24 12.48 24 13.3333C24 16.64 22.48 19.6 20.12 21.56Z"
+            fill="white" />
+        </svg>
 
-    <!-- =========================
-     HERO SECTION
-========================== -->
-
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-container">
-          <p class="hero-subtitle"> BRIDGING MARKETS. </p>
-
-          <h1 class="hero-title">
-            BUILDING <br />
-            VALUE.
-          </h1>
-
-          <p class="hero-text">
-            We connect businesses with opportunities through innovative
-            solutions, strategic partnerships and long-term sustainable growth.
-          </p>
-
-          <a href="#" class="hero-btn"> Learn More </a>
-        </div>
+        <!-- Featured Card Title  -->
+        <p class="featured-card-title">OPERATIONAL EXCELLENCE</p>
+        <p class="featured-card-desc"
+          >We support our portfolio companies with hands-on expertise to drive
+          performance and growth.</p
+        >
       </div>
-    </section>
+      <!-- Featured Card No. 3  -->
+      <div class="featured-card">
+        <!-- Featured Card SVG icon   -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none">
+          <g clip-path="url(#clip0_55_337)">
+            <path
+              d="M8.06667 10.7333C4.42667 14.3733 4.42667 20.2933 8.06667 23.9333C9.89334 25.76 12.28 26.6666 14.6667 26.6666C17.0533 26.6666 19.44 25.76 21.2667 23.9333C25.9067 19.2933 26.6667 5.33331 26.6667 5.33331C26.6667 5.33331 12.7067 6.09331 8.06667 10.7333ZM19.3867 22.0533C18.12 23.3066 16.4533 24 14.6667 24C13.48 24 12.36 23.6666 11.36 23.0933C12.5867 19.2533 14.8533 15.88 17.8667 13.3333C14.36 15.1466 11.4133 17.9466 9.37334 21.3333C7.4 18.72 7.57334 15 9.96 12.6133C12.28 10.2933 18.72 8.86665 23.7333 8.26665C23.1333 13.28 21.7067 19.72 19.3867 22.0533Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_55_337">
+              <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <!-- Featured Card Title  -->
+        <p class="featured-card-title">RESPONSIBLE INVESTING</p>
+        <p class="featured-card-desc"
+          >We create value with consideration for environmental, social and
+          governance principles.</p
+        >
+      </div>
+      <!-- Featured Card No. 4  -->
+      <div class="featured-card">
+        <!-- Featured Card SVG icon   -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none">
+          <g clip-path="url(#clip0_55_341)">
+            <path
+              d="M16 2.66669C8.63996 2.66669 2.66663 8.64002 2.66663 16C2.66663 23.36 8.63996 29.3334 16 29.3334C23.36 29.3334 29.3333 23.36 29.3333 16C29.3333 8.64002 23.36 2.66669 16 2.66669ZM16 26.6667C10.12 26.6667 5.33329 21.88 5.33329 16C5.33329 10.12 10.12 5.33335 16 5.33335C21.88 5.33335 26.6666 10.12 26.6666 16C26.6666 21.88 21.88 26.6667 16 26.6667Z"
+              fill="white" />
+            <path
+              d="M10.6667 21.3333C12.1394 21.3333 13.3333 20.1394 13.3333 18.6667C13.3333 17.1939 12.1394 16 10.6667 16C9.19391 16 8 17.1939 8 18.6667C8 20.1394 9.19391 21.3333 10.6667 21.3333Z"
+              fill="white" />
+            <path
+              d="M16 13.3333C17.4728 13.3333 18.6667 12.1394 18.6667 10.6667C18.6667 9.19391 17.4728 8 16 8C14.5273 8 13.3334 9.19391 13.3334 10.6667C13.3334 12.1394 14.5273 13.3333 16 13.3333Z"
+              fill="white" />
+            <path
+              d="M21.3333 21.3333C22.8061 21.3333 24 20.1394 24 18.6667C24 17.1939 22.8061 16 21.3333 16C19.8605 16 18.6666 17.1939 18.6666 18.6667C18.6666 20.1394 19.8605 21.3333 21.3333 21.3333Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_55_341">
+              <rect width="32" height="32" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
+        <!-- Featured Card Title  -->
+        <p class="featured-card-title">STRONG PARTNERSHIPS</p>
+        <p class="featured-card-desc"
+          >We believe in trust, collaboration and open communication at every
+          level.</p
+        >
+      </div>
+    </div>
+
+    <!-- 1. Include GSAP FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <script>
+      // GSAP animation Code
+      document.querySelectorAll(".featured-card");
+
+      var tl = gsap.timeline();
+      tl.from(".featured-card", {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+        stagger: 0.3,
+      });
+    </script>
   </body>
 </html>

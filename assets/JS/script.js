@@ -15,3 +15,15 @@ overlay.addEventListener("click", () => {
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+// GSAP animation Code
+document.querySelectorAll(".featured-card");
+
+var tl = gsap.timeline();
+tl.to(".featured-card", {
+  y: -20,
+  opacity: 1,
+  duration: 0.5,
+  delay: 0.5,
+  stagger: 0.5,
+});

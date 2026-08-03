@@ -130,4 +130,50 @@
     /* ################################  */
     /* END :: Home Page About container  */
     /* ################################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ######################################  */
+    /* START :: Home Page Portfolio container  */
+    /* ######################################  */
+    .portfolio-section {
+        padding: 75px 0 60px;
+
+        .container {
+            .portfolio-container {
+                .portfolio-content-container {
+                    gap: 16px;
+
+                    .home-portfolio-title {
+                        >span {}
+
+                        .home-portfolio-title-line {}
+                    }
+
+                    .home-portfolio-head {
+                        font-size: 26px;
+                        line-height: 37px;
+                    }
+
+                    .home-portfolio-desc {
+                        line-height: 24px;
+                    }
+
+                    .primary-btn {
+                        &.white-btn {
+                            span {}
+
+                            i {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ####################################  */
+    /* END :: Home Page Portfolio container  */
+    /* ####################################  */
 }
