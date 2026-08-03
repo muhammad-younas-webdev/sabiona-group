@@ -147,4 +147,62 @@
     /* ################################  */
     /* END :: Home Page About container  */
     /* ################################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ######################################  */
+    /* START :: Home Page Portfolio container  */
+    /* ######################################  */
+    .portfolio-section {
+        .container {
+            .portfolio-container {
+                flex-direction: column;
+                align-items: start;
+
+                .portfolio-content-container {
+                    .home-portfolio-title {
+                        >span {}
+
+                        .home-portfolio-title-line {}
+                    }
+
+                    .home-portfolio-head {}
+
+                    .home-portfolio-desc {}
+                }
+
+                .cards-swiper-wrapper {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                .portfolio-card {
+                                    .swiper-card-image {
+                                        img {}
+                                    }
+
+                                    .card-content-wrapper {
+                                        .swiper-card-icon {}
+
+                                        .card-content {
+                                            .swiper-card-title {}
+
+                                            .swiper-card-desc {}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .swiper-pagination {}
+                    }
+                }
+            }
+        }
+    }
+
+    /* ######################################  */
+    /* START :: Home Page Portfolio container  */
+    /* ######################################  */
 }
