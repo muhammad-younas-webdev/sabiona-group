@@ -208,4 +208,75 @@
     /* ######################################  */
     /* START :: Home Page Portfolio container  */
     /* ######################################  */
+    .footer-section {
+        .footer-container {
+            .footer-main-banner-image-wrapper {
+                &::before {}
+
+                &::after {}
+
+                .footer-main-banner {
+                    grid-template-columns: auto;
+                    gap: 20px;
+
+                    .footer-main-header {
+                        text-align: center;
+
+                        span {}
+                    }
+
+                    .footer-banner-desc {
+                        width: 70%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .footer-navigation-main-container {
+                .footer-navigation-container {
+                    grid-template-columns: auto;
+                    gap: 20px;
+                    place-content: center;
+
+                    .footer-logo-image {
+                        img {}
+                    }
+
+                    .footer-navbar {
+                        .footer-nav-list {
+                            width: 60vw;
+
+                            .footer-nav-item {
+                                .footer-nav-link {
+                                    &:hover {}
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-social-icons {
+                        justify-content: center;
+
+                        .footer-social-link {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-copyright-main-container {
+                .footer-copyright-bar {
+                    .copyright-text {}
+
+                    .footer-bottom-links {
+                        .footer-bottom-link {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
 }
