@@ -364,6 +364,7 @@ Josefin Sans Font Link */
 /* START :: Home Page Portflio container   */
 /* ######################################  */
 .portfolio-section {
+    background-color: #EEEEEE;
     padding: 120px 0 100px;
     display: flex;
     flex-direction: column;
@@ -423,81 +424,87 @@ Josefin Sans Font Link */
             .cards-swiper-wrapper {
                 width: 100%;
                 position: relative;
+                max-width: 100%;
+                overflow: hidden;
 
                 .swiper {
                     overflow: hidden;
+                    width: 100%;
 
                     .swiper-wrapper {
+                        display: flex;
+                        width: 100%;
+
                         .swiper-slide {
                             position: relative;
                             height: auto;
-                            height: 340px;
+                            width: 100%;
+                            max-width: fit-content;
 
-                            .swiper-slide {
-                                width: 100%;
+                            .portfolio-card {
+                                position: relative;
+                                /* ************* */
+                                /* ************* */
+                                overflow: hidden;
+                                border-radius: 8px;
+                                cursor: pointer;
+                                transition: all .4s ease;
+                                height: 340px;
+                                width: 244px;
 
-                                .portfolio-card {
-                                    position: relative;
-                                    /* ************* */
-                                    /* ************* */
-                                    overflow: hidden;
-                                    border-radius: 8px;
-                                    cursor: pointer;
-                                    transition: all .4s ease;
+                                .swiper-card-image {
+                                    width: 100%;
+                                    height: 100%;
+                                    transition: transform .5s ease;
+                                    filter: grayscale(100%) brightness(0.9) contrast(0.95);
 
-                                    .swiper-card-image {
+                                    img {
+                                        border-radius: 8px;
                                         width: 100%;
                                         height: 100%;
-                                        filter: grayscale(100%) brightness(0.9) contrast(0.95);
+                                        object-fit: cover;
+                                        display: block;
+                                        transition: transform .5s ease;
+                                    }
+                                }
 
-                                        img {
-                                            border-radius: 8px;
-                                            width: 100%;
-                                            height: 100%;
-                                            object-fit: cover;
-                                            display: block;
-                                            transition: transform .5s ease;
-                                        }
+                                .card-content-wrapper {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    height: 100%;
+                                    position: absolute;
+                                    inset: 0;
+                                    padding: 24px;
+
+                                    .swiper-card-icon {
+                                        max-width: max-content;
+                                        border: 1px solid #FFFFFF4D;
+                                        background-color: #FFFFFF26;
+                                        border-radius: 24px;
+                                        width: 48px;
+                                        height: 48px;
+                                        aspect-ratio: 1;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
                                     }
 
-                                    .card-content-wrapper {
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: space-between;
-                                        height: 100%;
-                                        position: absolute;
-                                        inset: 0;
-                                        padding: 24px;
-
-                                        .swiper-card-icon {
-                                            max-width: max-content;
-                                            border: 1px solid #FFFFFF4D;
-                                            background-color: #FFFFFF26;
-                                            border-radius: 24px;
-                                            width: 48px;
-                                            height: 48px;
-                                            aspect-ratio: 1;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
+                                    .card-content {
+                                        .swiper-card-title {
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            line-height: 100%;
+                                            text-transform: uppercase;
+                                            color: var(--white);
                                         }
 
-                                        .card-content {
-                                            .swiper-card-title {
-                                                font-size: 16px;
-                                                font-weight: 700;
-                                                line-height: 100%;
-                                                text-transform: uppercase;
-                                                color: var(--white);
-                                            }
-
-                                            .swiper-card-desc {
-                                                margin-top: 8px;
-                                                font-size: 12px;
-                                                line-height: 18px;
-                                                font-weight: 400;
-                                                color: var(--white);
-                                            }
+                                        .swiper-card-desc {
+                                            margin-top: 8px;
+                                            font-size: 12px;
+                                            line-height: 18px;
+                                            font-weight: 400;
+                                            color: var(--white);
                                         }
                                     }
                                 }
@@ -506,30 +513,44 @@ Josefin Sans Font Link */
                             .portfolio-card:hover .swiper-card-image img {
                                 transform: scale(1.08);
                             }
+                        }
 
-                            .portfolio-card:hover .swiper-card-image {
-                                filter: grayscale(0%);
+                        & .swiper-slide {
+                            .portfolio-card {
+                                .swiper-card-image-active {
+                                    transform: scale(1.08);
+                                    height: inherit;
+                                    filter: grayscale(0%);
+
+                                    img {}
+                                }
                             }
                         }
                     }
 
-                    .swiper-pagination {
+                    .swiper-pagination-dots {
                         position: relative;
                         margin-top: 40px;
-                    }
+                        width: 100%;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        justify-content: center;
 
-                    .swiper-pagination-bullet {
-                        width: 12px;
-                        height: 12px;
-                        background: #8A8A8A;
-                        opacity: 1;
-                        transition: .3s;
-                    }
+                        .custom-pagination-bullet {
+                            width: 12px;
+                            height: 12px;
+                            background: #1118271A;
+                            opacity: 1;
+                            transition: .3s;
+                            border-radius: 50%;
 
-                    .swiper-pagination-bullet-active {
-                        background: #fff;
-                        width: 30px;
-                        border-radius: 30px;
+                            &.swiper-pagination-bullet-active {
+                                background: #111827;
+                                width: 30px;
+                                border-radius: 30px;
+                            }
+                        }
                     }
                 }
             }
@@ -539,4 +560,78 @@ Josefin Sans Font Link */
 
 /* ####################################  */
 /* END :: Home Page Portflio container   */
+/* ####################################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* #####################  */
+/* ######################################  */
+/* START :: Home Page Footer  container   */
+/* ######################################  */
+.footer-section {
+    padding-top: 62px;
+
+    .container {
+        .footer-container {
+            .footer-main-banner {
+                background: linear-gradient(180deg, #141920 0%, rgba(20, 25, 32, 0.6) 40%, rgba(20, 25, 32, 0.1) 75%, rgba(20, 25, 32, 0) 100%);
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: space-between;
+
+                .footer-main-header {
+                    font-weight: 300;
+                    font-size: 30px;
+                    line-height: 48px;
+                    color: #FFFFFF;
+                }
+
+                .footer-banner-desc {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 22px;
+                    columns: #999EA8;
+                }
+            }
+
+            .footer-navigation-container {
+                .footer-logo-image {
+                    width: 120px;
+
+                    img {}
+                }
+
+                .footer-navbar {
+                    .footer-nav-list {
+                        .footer-nav-item {
+                            .footer-nav-link {}
+                        }
+                    }
+                }
+
+                .footer-social-icons {
+                    .linkedin-link {
+                        svg {
+                            path {}
+                        }
+                    }
+                }
+            }
+
+            .footer-copyright-bar {
+                .copyright-text {}
+
+                .footer-bottom-links {
+                    .footer-bottom-link {}
+
+                    span {}
+                }
+            }
+        }
+    }
+}
+
+/* ####################################  */
+/* END :: Home Page Footer  container    */
 /* ####################################  */
