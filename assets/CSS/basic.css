@@ -55,6 +55,7 @@ img {
     transition: var(--transition-default);
     position: relative;
     max-width: max-content;
+    max-height: max-content;
 
     &.black-btn {
         border: 1px solid var(--white);
