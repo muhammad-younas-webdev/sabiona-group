@@ -179,6 +179,7 @@
                             .swiper-slide {
                                 .portfolio-card {
                                     max-width: 244px;
+                                    aspect-ratio: 61/85;
 
                                     .swiper-card-image {
                                         img {}
