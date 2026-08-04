@@ -687,13 +687,37 @@ Josefin Sans Font Link */
             }
         }
 
-        .footer-copyright-bar {
-            .copyright-text {}
+        .footer-copyright-main-container {
+            .footer-copyright-bar {
+                display: flex;
+                padding: 18px 0;
+                max-width: 1380px;
+                width: 96%;
+                justify-content: space-between;
+                margin: 0 auto;
 
-            .footer-bottom-links {
-                .footer-bottom-link {}
+                .copyright-text {
+                    color: #737880;
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 100%;
+                }
 
-                span {}
+                .footer-bottom-links {
+                    gap: 8px;
+                    display: flex;
+
+                    .footer-bottom-link {
+                        color: #737880;
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 100%;
+                    }
+
+                    span {
+                        color: #595E66;
+                    }
+                }
             }
         }
     }
