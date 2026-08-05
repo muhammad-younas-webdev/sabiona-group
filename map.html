@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Map</title>
+
+    <!-- Aktuelle Leaflet CSS & JS Bibliothek -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      /* Karten-Container & Hintergrund */
+      #map {
+        width: 100%;
+        height: 690px;
+        border-radius: 8px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        max-width: 420px;
+        aspect-ratio: 6/7;
+      }
+
+      /* Target-Symbol: Äußerer Kreis mit innerem Punkt */
+      .target-symbol {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+
+      .target-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        display: block;
+      }
+
+      /* Rot: Äußerer Ring + Innerer Punkt */
+      .symbol-red {
+        border: 1px solid #ff0000;
+      }
+      .symbol-red .target-dot {
+        background-color: #ff0000;
+      }
+
+      /* Blau: Äußerer Ring + Innerer Punkt */
+      .symbol-blue {
+        border: 1px solid #0056b3;
+      }
+      .symbol-blue .target-dot {
+        background-color: #007bff;
+      }
+
+      /* Textbeschriftung: Mager / Normal */
+      .city-label {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        font-size: 11px;
+        font-weight: normal;
+        color: #333333;
+        padding: 0;
+        margin-left: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      // 1. Karte initialisieren
+      var map = L.map("map").setView([30, 10], 2);
+
+      // 2. Erstelle benutzerdefinierte HTML-Icons (Ring + innerer Punkt)
+      var redIcon = L.divIcon({
+        className: "custom-target",
+        html: '<div class="target-symbol symbol-red"><span class="target-dot"></span></div>',
+        iconSize: [11, 11],
+        iconAnchor: [5.5, 5.5], // ZENTRIERT
+      });
+
+      var blueIcon = L.divIcon({
+        className: "custom-target",
+        html: '<div class="target-symbol symbol-blue"><span class="target-dot"></span></div>',
+        iconSize: [11, 11],
+        iconAnchor: [5.5, 5.5], // ZENTRIERT
+      });
+
+      // 3. Standort-Daten [Breitengrad (Lat), Längengrad (Lon), Englischer Stadtname, IstBlau?]
+      var markerPositions = [
+        [46.49425, 11.33531, "Bolzano", true], // MVHI (Blau)
+        [48.0154, 11.58243, "Unterhaching", true], // MVHD (Blau)
+        [50.645562, 10.687278, "Suhl", false],
+        [50.46772, 11.65369, "Wurzbach", false],
+        [48.2214, 12.4118, "Waldkraiburg", false],
+        [51.7128, 7.834, "Hamm", false],
+        [13.1283, 101.1495, "Rayong", false],
+        [49.0085, 14.004, "Prachatice", false],
+        [52.4164, 8.6007, "Rahden", false],
+        [35.4042, -80.8615, "Huntersville", false],
+        [45.5531, 9.3128, "Agrate Brianza", false],
+        [19.558, -99.265, "Tlalnepantla", false],
+        [51.9314, -0.5625, "Houghton Regis", false],
+        [25.0153, 121.4732, "New Taipei City", false],
+        [50.0681, 14.3752, "Prague", false],
+        [13.6423, 100.4504, "Bangkok", false],
+        [50.1234, 18.9912, "Tychy", false],
+        [25.0139, 121.4625, "Banqiao", false],
+        [3.1045, 101.5993, "Petaling Jaya", false],
+      ];
+
+      // 4. Vektor-Länderkarte laden (Farbe #e4e4e4, Grenze weiß)
+      fetch(
+        "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json",
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          L.geoJSON(data, {
+            style: {
+              color: "#ffffff", // Grenze in WEISS
+              weight: 1, // Grenzstärke
+              fillColor: "#e4e4e4", // Landfläche in #e4e4e4
+              fillOpacity: 1,
+            },
+          }).addTo(map);
+
+          // 5. Marker & Englische Städtenamen zeichnen
+          var bounds = [];
+          markerPositions.forEach(function (item) {
+            var lat = item[0];
+            var lon = item[1];
+            var cityName = item[2];
+            var isBlue = item[3];
+
+            // Icon wählen (Blau vs Rot)
+            var currentIcon = isBlue ? blueIcon : redIcon;
+
+            // Marker setzen
+            var marker = L.marker([lat, lon], { icon: currentIcon }).addTo(map);
+
+            // Stadtname anzeigen
+            marker.bindTooltip(cityName, {
+              permanent: true,
+              direction: "right",
+              className: "city-label",
+              offset: [6, 0],
+            });
+
+            bounds.push([lat, lon]);
+          });
+
+          // Auto-Zoom auf alle Punkte
+          if (bounds.length > 0) {
+            map.fitBounds(bounds, { padding: [40, 40] });
+          }
+        });
+    </script>
+  </body>
+</html>
