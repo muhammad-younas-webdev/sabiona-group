@@ -29,29 +29,25 @@
   /* ##########################  */
   /* START :: Hero container     */
   /* ##########################  */
-  .sabiona-hero-section {
+  .home-hero-section {
     padding: 46px 0 62px;
 
-    .gradient-top {}
-
-    .gradient-left {}
-
     .container {
-      .sabiona-hero-container {
-        .hero-content-main-wrapper {
-          .hero-content-wrapper {
-            .hero-title {}
+      .home-hero-container {
+        .home-hero-content-main-wrapper {
+          .home-hero-content-wrapper {
+            .home-hero-title {}
 
-            .title-outline {}
+            .home-title-outline {}
 
-            .hero-head {
+            .home-hero-head {
               font-size: 42px;
               line-height: 50px;
               padding-block: 18px;
               max-width: 200px;
             }
 
-            .hero-desc {
+            .home-hero-desc {
               font-size: 14px;
               line-height: 22px;
               max-width: 300px;
@@ -62,13 +58,13 @@
             }
           }
 
-          .hero-isolation-image {
+          .home-hero-isolation-image {
             max-width: 370PX;
             width: 100%;
           }
         }
 
-        .featured-cards {
+        .home-featured-cards {
           grid-template-columns: repeat(1, 1fr);
         }
       }

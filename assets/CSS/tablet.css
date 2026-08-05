@@ -28,20 +28,20 @@
     /* ##########################  */
     /* START :: Hero container     */
     /* ##########################  */
-    .sabiona-hero-section {
-        .gradient-top {}
+    .home-hero-section {
+        .home-gradient-top {}
 
-        .gradient-left {}
+        .home-gradient-left {}
 
         .container {
-            .sabiona-hero-container {
-                .hero-content-main-wrapper {
-                    .hero-content-wrapper {
-                        .hero-title {}
+            .home-hero-container {
+                .home-hero-content-main-wrapper {
+                    .home-hero-content-wrapper {
+                        .home-hero-title {}
 
-                        .title-outline {}
+                        .home-title-outline {}
 
-                        .hero-head {
+                        .home-hero-head {
                             font-size: 68px;
                             line-height: 75px;
                             width: 385px;
@@ -52,7 +52,7 @@
                         .primary-btn {}
                     }
 
-                    .hero-isolation-image {
+                    .home-hero-isolation-image {
                         display: none;
                     }
                 }

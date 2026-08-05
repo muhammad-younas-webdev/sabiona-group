@@ -17,10 +17,10 @@ overlay.addEventListener("click", () => {
 });
 
 // GSAP animation Code
-document.querySelectorAll(".featured-card");
+document.querySelectorAll(".home-featured-card");
 
 var tl = gsap.timeline();
-tl.to(".featured-card", {
+tl.to(".home-featured-card", {
   y: -24,
   opacity: 1,
   duration: 0.3,

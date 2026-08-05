@@ -45,37 +45,37 @@
     /* ##########################  */
     /* START :: Hero container     */
     /* ##########################  */
-    .sabiona-hero-section {
-        .gradient-top {}
+    .home-hero-section {
+        .home-gradient-top {}
 
-        .gradient-left {}
+        .home-gradient-left {}
 
         .container {
-            .sabiona-hero-container {
-                .hero-content-main-wrapper {
-                    .hero-content-wrapper {
-                        .hero-title {}
+            .home-hero-container {
+                .home-hero-content-main-wrapper {
+                    .home-hero-content-wrapper {
+                        .home-hero-title {}
 
                         .title-outline {}
 
-                        .hero-head {
+                        .home-hero-head {
                             font-size: 55px;
                             line-height: 67px;
                             max-width: 385px;
                         }
 
-                        .hero-desc {}
+                        .home-hero-desc {}
 
                         .primary-btn {}
                     }
 
-                    .hero-isolation-image {
+                    .home-hero-isolation-image {
                         max-width: 370PX;
                         width: 100%;
                     }
                 }
 
-                .featured-cards {
+                .home-featured-cards {
                     grid-template-columns: repeat(2, 1fr);
                 }
             }

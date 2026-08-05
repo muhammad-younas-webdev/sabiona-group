@@ -85,17 +85,17 @@
     /* ##########################  */
     /* START :: Hero container     */
     /* ##########################  */
-    .sabiona-hero-section {
+    .home-hero-section {
         .container {
-            .sabiona-hero-container {
-                .hero-content-main-wrapper {
-                    .hero-isolation-image {
+            .home-hero-container {
+                .home-hero-content-main-wrapper {
+                    .home-hero-isolation-image {
                         max-width: 370PX;
                         width: 100%;
                     }
                 }
 
-                .featured-cards {
+                .home-featured-cards {
                     grid-template-columns: repeat(2, 1fr);
                 }
             }
