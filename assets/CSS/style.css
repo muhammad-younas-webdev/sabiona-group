@@ -259,6 +259,7 @@ Josefin Sans Font Link */
             width: 100%;
             justify-content: space-between;
             align-items: center;
+            gap: 26px;
 
             .home-about-us-content-wrapper {
                 display: flex;
@@ -303,14 +304,18 @@ Josefin Sans Font Link */
             }
 
             /* Karten-Container & Hintergrund */
-            #map {
+            .map-wrapper {
                 width: 100%;
-                height: 690px;
-                border-radius: 8px;
-                background: #f0f0f0;
-                border: 1px solid #ccc;
-                max-width: 420px;
-                height: 360px;
+
+                #map {
+                    width: 100%;
+                    height: 690px;
+                    border-radius: 8px;
+                    background: #f0f0f0;
+                    border: 1px solid #ccc;
+                    max-width: 420px;
+                    height: 360px;
+                }
             }
 
             /* Target-Symbol: Äußerer Kreis mit innerem Punkt */
@@ -431,6 +436,8 @@ Josefin Sans Font Link */
             align-items: center;
             gap: 60px;
             justify-self: center;
+            display: grid;
+            grid-template-columns: max-content auto;
 
             .portfolio-content-container {
                 display: flex;
@@ -598,12 +605,17 @@ Josefin Sans Font Link */
                             background: #1118271A;
                             opacity: 1;
                             transition: .3s;
+                            transition: var(--transition-default);
                             border-radius: 50%;
 
                             &.swiper-pagination-bullet-active {
                                 background: #111827;
                                 width: 30px;
                                 border-radius: 30px;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
                             }
                         }
                     }
@@ -703,7 +715,9 @@ Josefin Sans Font Link */
                 .footer-logo-image {
                     width: 120px;
 
-                    img {}
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 .footer-navbar {
@@ -734,7 +748,17 @@ Josefin Sans Font Link */
 
                     .footer-social-link {
                         svg {
-                            path {}
+                            path {
+                                transition: var(--transition-default);
+                            }
+                        }
+
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: white;
+                                }
+                            }
                         }
                     }
                 }
@@ -760,12 +784,18 @@ Josefin Sans Font Link */
                 .footer-bottom-links {
                     gap: 8px;
                     display: flex;
+                    align-items: center;
 
                     .footer-bottom-link {
                         color: #737880;
                         font-weight: 400;
                         font-size: 11px;
-                        line-height: 100%;
+                        line-height: 14px;
+                        transition: var(--transition-default);
+
+                        &:hover {
+                            color: white;
+                        }
                     }
 
                     span {

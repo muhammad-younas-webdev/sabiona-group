@@ -81,4 +81,163 @@
             }
         }
     }
+
+    /* ##########################  */
+    /* END :: Hero container     */
+    /* ##########################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* #####################  */
+    /* ##################################  */
+    /* START :: Home Portfolio Container    */
+    /* ##################################  */
+    .portfolio-section {
+        padding: 75px 0 75px;
+
+        .container {
+            .portfolio-container {
+                justify-self: start;
+                gap: 0;
+
+                .portfolio-content-container {
+                    max-width: none;
+                    width: 90vw;
+                    gap: 20px;
+
+                    .home-portfolio-title {
+                        >span {}
+
+                        .home-portfolio-title-line {}
+                    }
+
+                    .home-portfolio-head {
+                        font-size: 30px;
+                        line-height: 39px;
+                    }
+
+                    .home-portfolio-desc {}
+                }
+
+                /* .cards-swiper-wrapper {
+
+                .swiper {
+
+                    .swiper-wrapper {
+
+                        .swiper-slide {
+
+                            .portfolio-card {
+
+                                .swiper-card-image {
+
+                                    img {}
+                                }
+
+                                .card-content-wrapper {
+
+                                    .swiper-card-icon {}
+
+                                    .card-content {
+
+                                        .swiper-card-title {}
+
+                                        .swiper-card-desc {}
+                                    }
+                                }
+                            }
+
+                            .portfolio-card:hover {
+
+                                .swiper-card-image {
+
+                                    img {}
+                                }
+                            }
+                        }
+
+                        & .swiper-slide {
+
+                            .portfolio-card {
+
+                                .swiper-card-image-active {}
+                            }
+                        }
+                    }
+
+                    .swiper-pagination-dots {
+
+                        .custom-pagination-bullet {
+
+                            &.swiper-pagination-bullet-active {}
+                        }
+                    }
+                }
+            } */
+            }
+        }
+    }
+
+    /* ################################  */
+    /* END :: Home Portfollio Container    */
+    /* ################################  */
+    .footer-section {
+        .footer-container {
+            .footer-main-banner-image-wrapper {
+                .footer-main-banner {
+                    .footer-main-header {
+                        span {
+                            font-size: 6vw;
+                            line-height: 9vw;
+                        }
+                    }
+
+                    .footer-banner-desc {}
+                }
+            }
+
+            .footer-navigation-main-container {
+                .footer-navigation-container {
+                    .footer-logo-image {
+                        img {}
+                    }
+
+                    .footer-navbar {
+                        .footer-nav-list {
+                            width: 95vw;
+
+                            .footer-nav-item {
+                                .footer-nav-link {
+                                    &:hover {}
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-social-icons {
+                        justify-content: center;
+
+                        .footer-social-link {
+                            svg {
+                                path {}
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-copyright-main-container {
+                .footer-copyright-bar {
+                    .copyright-text {}
+
+                    .footer-bottom-links {
+                        .footer-bottom-link {}
+
+                        span {}
+                    }
+                }
+            }
+        }
+    }
 }

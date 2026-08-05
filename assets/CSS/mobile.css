@@ -1,179 +1,247 @@
 @media (max-width:420px) {
-    .sabiona-header-section {
-        .container {
-            .sobiona-header-container {
-                .header-logo-image {
-                    width: 90px;
-                }
-
-                .header-navbar-container {
-                    width: 100%;
-                    height: 100%;
-
-                    &.active {}
-
-                    .header-nav-list {}
-                }
-            }
+  .sabiona-header-section {
+    .container {
+      .sobiona-header-container {
+        .header-logo-image {
+          width: 90px;
         }
-    }
 
-    /* ##########################  */
-    /* END :: Header container     */
-    /* ##########################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* ##########################  */
-    /* START :: Hero container     */
-    /* ##########################  */
-    .sabiona-hero-section {
-        padding: 46px 0 62px;
+        .header-navbar-container {
+          width: 100%;
+          height: 100%;
 
-        .gradient-top {}
+          &.active {}
 
-        .gradient-left {}
-
-        .container {
-            .sabiona-hero-container {
-                .hero-content-main-wrapper {
-                    .hero-content-wrapper {
-                        .hero-title {}
-
-                        .title-outline {}
-
-                        .hero-head {
-                            font-size: 42px;
-                            line-height: 50px;
-                            padding-block: 18px;
-                            max-width: 200px;
-                        }
-
-                        .hero-desc {
-                            font-size: 14px;
-                            line-height: 22px;
-                            max-width: 300px;
-                        }
-
-                        .primary-btn {
-                            margin: 16px 0 40px;
-                        }
-                    }
-
-                    .hero-isolation-image {
-                        max-width: 370PX;
-                        width: 100%;
-                    }
-                }
-
-                .featured-cards {
-                    grid-template-columns: repeat(1, 1fr);
-                }
-            }
+          .header-nav-list {}
         }
+      }
     }
+  }
 
-    /* ##########################  */
-    /* END :: Hero container       */
-    /* ##########################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* ##################################  */
-    /* START :: Home Page About container  */
-    /* ##################################  */
-    .home-about-us-section {
-        padding: 65px 0;
+  /* ##########################  */
+  /* END :: Header container     */
+  /* ##########################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* ##########################  */
+  /* START :: Hero container     */
+  /* ##########################  */
+  .sabiona-hero-section {
+    padding: 46px 0 62px;
 
-        .container {
-            .home-about-us-container {
-                .home-about-us-content-wrapper {
-                    gap: 18px;
+    .gradient-top {}
 
-                    .home-about-title {
-                        >span {}
+    .gradient-left {}
 
-                        .home-about-title-line {}
-                    }
+    .container {
+      .sabiona-hero-container {
+        .hero-content-main-wrapper {
+          .hero-content-wrapper {
+            .hero-title {}
 
-                    .home-about-head {
-                        font-size: 26px;
-                        line-height: 38px;
-                    }
+            .title-outline {}
 
-                    .home-about-desc {
-                        line-height: 23px;
-                    }
-                }
-
-                .home-about-map-image {}
-
-                .home-about-location-card {
-                    .location-number {}
-
-                    .location-label {}
-
-                    .location-card-item {
-                        .location-title {}
-
-                        .location-desc {}
-                    }
-                }
+            .hero-head {
+              font-size: 42px;
+              line-height: 50px;
+              padding-block: 18px;
+              max-width: 200px;
             }
-        }
-    }
 
-    /* ################################  */
-    /* END :: Home Page About container  */
-    /* ################################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* ######################################  */
-    /* START :: Home Page Portfolio container  */
-    /* ######################################  */
-    .portfolio-section {
-        padding: 75px 0 60px;
-
-        .container {
-            .portfolio-container {
-                .portfolio-content-container {
-                    gap: 16px;
-
-                    .home-portfolio-title {
-                        >span {}
-
-                        .home-portfolio-title-line {}
-                    }
-
-                    .home-portfolio-head {
-                        font-size: 26px;
-                        line-height: 37px;
-                    }
-
-                    .home-portfolio-desc {
-                        line-height: 24px;
-                    }
-
-                    .primary-btn {
-                        &.white-btn {
-                            span {}
-
-                            i {}
-                        }
-                    }
-                }
+            .hero-desc {
+              font-size: 14px;
+              line-height: 22px;
+              max-width: 300px;
             }
-        }
-    }
 
-    /* ####################################  */
-    /* END :: Home Page Portfolio container  */
-    /* ####################################  */
+            .primary-btn {
+              margin: 16px 0 40px;
+            }
+          }
+
+          .hero-isolation-image {
+            max-width: 370PX;
+            width: 100%;
+          }
+        }
+
+        .featured-cards {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+
+  /* ##########################  */
+  /* END :: Hero container       */
+  /* ##########################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* ##################################  */
+  /* START :: Home Page About container  */
+  /* ##################################  */
+  .home-about-us-section {
+    padding: 65px 0;
+
+    .container {
+      .home-about-us-container {
+        .home-about-us-content-wrapper {
+          gap: 18px;
+
+          .home-about-title {
+            >span {}
+
+            .home-about-title-line {}
+          }
+
+          .home-about-head {
+            font-size: 26px;
+            line-height: 38px;
+          }
+
+          .home-about-desc {
+            line-height: 23px;
+          }
+        }
+
+        .home-about-map-image {}
+
+        .home-about-location-card {
+          .location-number {}
+
+          .location-label {}
+
+          .location-card-item {
+            .location-title {}
+
+            .location-desc {}
+          }
+        }
+      }
+    }
+  }
+
+  /* ################################  */
+  /* END :: Home Page About container  */
+  /* ################################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* #####################  */
+  /* ######################################  */
+  /* START :: Home Page Portfolio container  */
+  /* ######################################  */
+  .portfolio-section {
+    padding: 45px 0 40px;
+
+    .container {
+      .portfolio-container {
+        .portfolio-content-container {
+          gap: 16px;
+
+          .home-portfolio-title {
+            >span {
+              font-size: 10px;
+            }
+
+            .home-portfolio-title-line {}
+          }
+
+          .home-portfolio-head {
+            font-size: 24px;
+            line-height: 34px;
+          }
+
+          .home-portfolio-desc {
+            line-height: 24px;
+          }
+
+          .primary-btn {
+            &.white-btn {
+              span {}
+
+              i {}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ####################################  */
+  /* END :: Home Page Portfolio container  */
+  /* ####################################  */
+  .footer-section {
+    .footer-container {
+      .footer-main-banner-image-wrapper {
+        .footer-main-banner {
+          .footer-main-header {
+            span {}
+          }
+
+          .footer-banner-desc {
+            width: 100%;
+          }
+        }
+      }
+
+      .footer-navigation-main-container {
+        .footer-navigation-container {
+          gap: 40px;
+
+          .footer-logo-image {
+            img {}
+          }
+
+          .footer-navbar {
+            .footer-nav-list {
+              width: 100%;
+              gap: 20px;
+              flex-direction: column;
+
+              .footer-nav-item {
+                .footer-nav-link {
+                  &:hover {}
+                }
+              }
+            }
+          }
+
+          .footer-social-icons {
+            .footer-social-link {
+              svg {
+                path {}
+              }
+            }
+          }
+        }
+      }
+
+      .footer-copyright-main-container {
+        .footer-copyright-bar {
+          padding: 0;
+
+          .copyright-text {
+            font-size: 10px;
+            line-height: 27px;
+          }
+
+          .footer-bottom-links {
+            align-items: center;
+
+            .footer-bottom-link {}
+
+            span {}
+          }
+        }
+      }
+    }
+  }
 }
