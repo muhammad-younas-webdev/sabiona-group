@@ -1,47 +1,5 @@
 @media (max-width:576px) {
-    .sabiona-header-section {
-        .container {
-            .sobiona-header-container {
-                .header-logo-image {
-                    width: 80px;
-                }
 
-                .header-navbar-container {
-                    &.active {}
-
-                    .header-nav-list {}
-                }
-
-                .hamburger-btn {
-                    width: 18px;
-                    height: 16px;
-
-                    &.active {
-                        .hamburger-line:nth-child(1) {
-                            transform: translateY(7px) rotate(45deg);
-                        }
-
-                        .hamburger-line:nth-child(2) {
-                            opacity: 0;
-                        }
-
-                        .hamburger-line:nth-child(3) {
-                            transform: translateY(-7px) rotate(-45deg);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /* ##########################  */
-    /* END :: Header container     */
-    /* ##########################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
-    /* #####################  */
     /* ##########################  */
     /* START :: Hero container     */
     /* ##########################  */
