@@ -1,0 +1,23 @@
+@media (max-width:992px) {
+    .about-hero-section {
+        .container {
+            .about-hero-container {
+                .about-hero-content-wrapper {
+                    .about-hero-image {
+                        img {}
+                    }
+
+                    .about-hero-content {
+                        .about-hero-content-title {
+                            span {}
+
+                            .about-hero-title-line {}
+                        }
+
+                        .about-hero-head {}
+                    }
+                }
+            }
+        }
+    }
+}

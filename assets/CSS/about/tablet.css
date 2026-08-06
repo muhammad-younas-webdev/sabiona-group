@@ -1,0 +1,37 @@
+@media (max-width:678px) {
+    .about-hero-section {
+        .container {
+            .about-hero-container {
+                .about-hero-content-wrapper {
+                    width: 63vw;
+
+                    .about-hero-image {
+                        max-width: 92%;
+                        top: 34px;
+
+                        img {}
+                    }
+
+                    .about-hero-content {
+                        gap: 15px;
+
+                        .about-hero-content-title {
+                            gap: 6px;
+
+                            span {
+                                font-size: 8px;
+                            }
+
+                            .about-hero-title-line {}
+                        }
+
+                        .about-hero-head {
+                            font-size: 12vw;
+                            line-height: 12.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
