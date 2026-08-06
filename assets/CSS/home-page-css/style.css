@@ -644,7 +644,7 @@ Josefin Sans Font Link */
 
     .footer-container {
         .footer-main-banner-image-wrapper {
-            background-image: url(../images/footer-bg-img.png);
+            background-image: url(../../images/footer-bg-img.png);
             background-position: center;
             background-size: cover;
             position: relative;
