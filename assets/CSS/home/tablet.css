@@ -29,35 +29,21 @@
     /* START :: Hero container     */
     /* ##########################  */
     .home-hero-section {
-        .home-gradient-top {}
-
-        .home-gradient-left {}
-
         .container {
             .home-hero-container {
                 .home-hero-content-main-wrapper {
                     .home-hero-content-wrapper {
-                        .home-hero-title {}
-
-                        .home-title-outline {}
-
                         .home-hero-head {
                             font-size: 68px;
                             line-height: 75px;
                             width: 385px;
                         }
-
-                        .hero-desc {}
-
-                        .primary-btn {}
                     }
 
                     .home-hero-isolation-image {
                         display: none;
                     }
                 }
-
-                .featured-cards {}
             }
         }
     }
